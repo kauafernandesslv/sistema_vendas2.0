@@ -8,10 +8,10 @@ package com.mycompany.modelo;
  *
  * @author kaua.1880
  */
-public class Videogame extends Produto{
+public class VideoGame extends Produto{
     String plataforma;
 
-    public Videogame() {
+    public VideoGame() {
     }
 
     public String getPlataforma() {

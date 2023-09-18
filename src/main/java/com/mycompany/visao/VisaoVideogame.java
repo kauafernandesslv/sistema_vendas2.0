@@ -4,23 +4,24 @@
  */
 package com.mycompany.visao;
 import java.util.Scanner;
-import com.mycompany.modelo.Videogame;
+import com.mycompany.modelo.VideoGame;
 
 /**
  *
  * @author kaua.1880
  */
-public class VisaoVideogame {
-    public static Videogame menuCadrastroVideogame(){
-        Videogame videogame = new Videogame();
-    System.out.println("Nome:");
-    videogame.setNome( new Scanner(System.in) .nextLine());
-    System.out.println("Preço:");
-    videogame.setPreco( new Scanner(System.in) .nextDouble());
-    videogame.setPlataforma(new Scanner(System.in).nextLine());
-    System.out.println("===========================================");
-    
-    return videogame;
-    
+public class VisaoVideoGame {
+    public static VideoGame menuCadastroVideoGame(){
+        VideoGame videoGame = new VideoGame();
+        
+        System.out.println("Nome: ");
+        videoGame.setNome(new Scanner(System.in).nextLine());
+        System.out.println("Preço: ");
+        videoGame.setPreco(new Scanner(System.in).nextDouble());
+        System.out.println("Plataforma: ");
+        videoGame.setPlataforma(new Scanner(System.in).nextLine());
+        System.out.println("===============================================");
+        
+        return videoGame;
     }
 }

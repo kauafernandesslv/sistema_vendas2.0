@@ -13,17 +13,18 @@ import java.util.Scanner;
  */
 public class VisaoComputador {
     public static Computador menuCadastroComputador(){
-       Computador computador = new Computador();
-       
-       System.out.println("Nome: ");
-        System.out.println("Nome:");
-    computador.setNome( new Scanner(System.in) .nextLine());
-    System.out.println("Preço:");
-    computador.setPreco( new Scanner(System.in) .nextDouble());
-    computador.setMemoriaRam(new Scanner(System.in).nextDouble());
-    computador.setProcessador(new Scanner(System.in).nextLine());
-    System.out.println("===========================================");
- 
-    return computador;
+        Computador computador = new Computador();
+        
+        System.out.println("Nome: ");
+        computador.setNome(new Scanner(System.in).nextLine());
+        System.out.println("Preço: ");
+        computador.setPreco(new Scanner(System.in).nextDouble());
+        System.out.println("Quantidade de memória Ram: ");
+        computador.setMemoriaRam(new Scanner(System.in).nextDouble());
+        System.out.println("Processador: ");
+        computador.setProcessador(new Scanner(System.in).nextLine());
+        System.out.println("===============================================");
+        
+        return computador;
     }
 }
