@@ -63,6 +63,7 @@ public class ControleSistema {
             
             televisao = (Televisao) VisaoMenu.menuAlteracaoProdutoInformacoes(televisao);
             ControleSistema.produtos.set(indiceProduto, televisao);
+            
         }
     }
     
@@ -111,5 +112,40 @@ public class ControleSistema {
             }
         }
     }
-}
+    }
+       public static void vender(int indiceProduto){
+        indiceProduto = indiceProduto - 1;
+
+        Object object = produtos.get(indiceProduto);
+
+        if(object instanceof VideoGame){
+            VideoGame videoGame = new VideoGame();
+            videoGame = (VideoGame) object;
+            System.out.println("Qual a quantidade do produto " + videoGame.getNome() + "?");
+            int quantidade = new Scanner(System.in).nextInt();
+        
+            Double preco = videoGame.getPreco() * quantidade;
+        
+            System.out.println(quantidade + " Unidades de " + videoGame.getNome() + " é igual a R$" + preco);
+        }if(object instanceof Computador){
+            Computador computador = new Computador();
+            computador = (Computador) object;
+            System.out.println("Qual a quantidade do produto " + computador.getNome() + "?");
+            int quantidade = new Scanner(System.in).nextInt();
+        
+            Double preco = computador.getPreco() * quantidade;
+        
+            System.out.println(quantidade + " Unidades de " + computador.getNome() + " é igual a R$" + preco);
+            
+        }if(object instanceof Televisao){
+            Televisao televisao = new Televisao();
+            televisao = (Televisao) object;
+            System.out.println("Qual a quantidade do produto " + televisao.getNome() + "?");
+            int quantidade = new Scanner(System.in).nextInt();
+        
+            Double preco = televisao.getPreco() * quantidade;
+        
+            System.out.println(quantidade + " Unidades de " + televisao.getNome() + " é igual a R$" + preco);
+        }
+    }
 }
